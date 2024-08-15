@@ -1,0 +1,152 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw 5.6vw 11.2vw 5.6vw;
+    min-height: 80vh;
+    text-align: center;
+    background-size: cover; 
+    width: 100%;
+    position: relative;
+    display: block;
+    text-shadow: 1px 1px 20px #000000, -1px -1px 20px #000000, 1px -1px 20px #000000, -1px 1px 20px #000000, 1px 1px 20px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 1px 1px 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 1px 1px 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000 ;
+
+
+
+    &_img {
+        background-image: url('../../dist/images/star-wars-plzcoaffexgf4h81.jpg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: -2;
+        opacity: 0.5;
+
+
+    }       
+    
+
+
+
+    @media (min-width: 768px) and (max-width: 1024px){
+        //padding-top: calc(50vw + 145px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        //margin-top: -55px;
+    }
+    
+    @media (max-width: 768px) {
+        //padding-top: calc(50vw + 145px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        //margin-top: -55px;
+    }
+    @media (min-width: 708px) and (max-width: 768px){
+        background-size: cover;
+    }
+    @media (min-width: 500px) and (max-width: 650px){
+        //padding-top: calc(50vw + 120px);
+    }
+
+    @media (min-width: 400px) and (max-width: 500px){
+        //padding-top: calc(50vw + 85px);
+    }
+
+    @media (min-width: 320px) and (max-width: 400px){
+        //padding-top: calc(50vw + 67px);
+    }
+    
+    
+    /* 
+    background-position: right; */  
+                                    /*tentei colocar essa regra css para tentar resolver o problema da imagem cortada , deu certo mas ficou mt grande
+                                    ocupando o espaço dos botoes, e o professor nao colocou essas regras, entao acredito que o problema seja no tamanho                                    
+                                    da imagem pois abrindo ela percebi que ela possui uma grande parte com a cor de fundo, talver o arquivo que o professor
+                                    esta utilizando nao seja o mesmo disponibinilado para os alunos porque eu fiz exatamente igual a ele pois utilizando a mesma 
+                                    configuração usada na aula era esperado o mesmo  resultado porem nao foi o que aconteceu oque sugere que o problema esta na imagem
+                                    */  
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
+    
+    &__content {
+        max-width: 640px;
+        margin: 0 auto;
+
+        @media (max-width: 1024px) {
+
+        }
+
+
+        &__branding{
+            margin: 0 auto;
+
+            & img {
+                height: 200px;
+                margin: 0 40px 40px 40px;
+            
+                @media (max-width: 500px) {
+                    max-width: 100%;
+                    height: auto;
+                    width: auto;
+                    margin: 30px auto 30px;
+                }
+    
+            }
+
+            @media (max-width: 768px) {
+                //max-width: 180px;
+            }
+
+        }
+
+        .title--small {
+            margin-bottom: 64px;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-top: 60px;
+            }
+        }
+
+        &__combos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            list-style: none;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                margin: 0 auto;
+                align-items: center;
+                justify-content: center;
+            }
+
+            @media (min-width: 568px) and (max-width: 768px){}
+
+            &__combo {
+                width: calc(50% - 12px);
+
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    margin-bottom: 24px;
+                }
+
+                img {
+                    max-height: 60px;
+                    
+                }
+            }
+        }
+    }
+}
+

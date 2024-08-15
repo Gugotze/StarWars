@@ -1,0 +1,90 @@
+@use 'variaveis';
+
+#sec {
+    margin-left: 20px;
+}
+
+.shows {
+    padding: 2vw 5.6vw; 
+    margin-bottom: 60px;
+
+    &__list {
+        margin-top: 44px;
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+        list-style: none;
+
+        @media (max-width: 768px){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &--is-active {
+            display: grid;
+        }
+
+        &__item {
+            img {
+                max-width: 100%;
+                border-radius: 6px;
+            }
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+
+
+        @media (max-width: 620px) {
+            display:block;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            padding-bottom: 5px;
+
+            
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        button {
+            background: none;
+            border: none;
+            padding-top: 20px;
+        }
+
+        button span{
+            text-shadow: 1px 1px 20px #000000, -1px -1px 20px #000000, 1px -1px 20px #000000, -1px 1px 20px #000000, 1px 1px 20px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 1px 1px 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 1px 1px 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000 ;
+            background: transparent;
+            margin-left: 100px;
+
+
+        }
+
+        &__button {
+            color: #fddf2b;
+            font-weight: bolder;
+            font-size: 20px;
+            border: none;
+            background: transparent;
+            text-transform: uppercase;
+            margin: 0 3vw;
+            cursor: pointer;
+            border-bottom: 5px solid transparent;
+            display: inline-block;
+
+            
+            &--is-active { 
+                border-color: variaveis.$corTextoSecundario;
+            }
+        }
+    } 
+}

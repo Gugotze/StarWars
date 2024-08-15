@@ -1,0 +1,76 @@
+/* Defina os backgrounds */
+.section-1 {
+    background-image: url('background-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+//.section-2, .section-3 {
+//    background-image: url('../../dist/images/1309265.jpg') !important;
+//    background-size: cover;
+//    background-position: center;
+//    height: 100vh;
+//    background-attachment: fixed; /* Mantém o background estático */
+//}
+
+  /* Adicione o efeito de brilho */
+//.section-2 {
+//    opacity: 1; /* Brilho normal */
+//}
+
+
+//.section-3 {
+//    opacity: 0.3; /* Brilho menor */
+
+//}
+
+.shows {
+    margin-bottom: 0;
+    padding-bottom: 60px;
+}
+
+.section-2, .section-3, .section-4, .section-5{
+    position: relative; /* Adicione position relative */
+    height: auto;
+    overflow: auto;
+
+  }
+
+
+
+
+.section-2 .background, .section-3 .background, .section-4 .background, .section-5 .background  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../dist/images/1309265.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantém o background estático */
+    z-index: -1; /* Coloque o background atrás do conteúdo */
+
+
+  }
+
+  /* Adicione o efeito de opacidade apenas ao background */
+//.section-2 .background {
+//    opacity: 1; /* Opacidade normal */
+//}
+
+.section-4 .background {
+   opacity: 0.6; /* Opacidade menor */
+}
+
+.section-5 .background {
+  opacity: 0.3; /* Opacidade menor */
+
+
+}
+
+
+
+
+
